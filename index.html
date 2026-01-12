@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Snake Web Game</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+  <!-- APP CONTAINER -->
+  <div id="app">
+
+    <!-- LOBBY SCREEN -->
+    <div id="lobby" class="screen active">
+      <h1 class="lobby-title">Snake Game</h1>
+
+      <div class="lobby-options">
+        <div class="lobby-group">
+          <label for="skinSelect">Pilih Skin</label>
+          <select id="skinSelect"></select>
+          <div id="skinPreview" class="preview-box"></div>
+        </div>
+
+        <div class="lobby-group">
+          <label for="mapSelect">Pilih Map</label>
+          <select id="mapSelect" style="margin-bottom: 20px;"></select>
+          <!-- <div id="mapPreview" class="preview-box"></div> -->
+        </div>
+      </div>
+
+      <button id="startGame">🎮 Start Game</button>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="game" class="screen">
+      <div id="score">Score: 0</div>
+      <div id="highScore">High Score: 0</div>
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- PAUSE SCREEN -->
+    <div id="pause" class="screen">
+      <h2>Game Paused</h2>
+      <p>Tekan ESC / P untuk lanjut</p>
+    </div>
+
+    <!-- GAME OVER SCREEN -->
+    <div id="gameOver" class="screen">
+      <h2>Game Over</h2>
+      <p id="finalScore"></p>
+      <p id="finalHighScore"></p>
+      <button onclick="location.reload()">Kembali ke Lobby</button>
+    </div>
+
+  </div>
+
+  <!-- MAIN JS -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
