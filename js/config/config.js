@@ -12,7 +12,7 @@ const Config = {
   // GAMEPLAY
   // =====================
   gameplay: {
-    tickRate: 120,    // ms per update (semakin kecil = semakin cepat)
+    tickRate: 175,    // ms per update (semakin kecil = semakin cepat)
     startLength: 3
   },
 
